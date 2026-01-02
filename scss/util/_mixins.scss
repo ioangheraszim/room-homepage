@@ -1,0 +1,25 @@
+@use "functions" as f;
+
+$breakpoints: (
+  "mobile": f.em(375),
+  "desktop": f.em(900),
+);
+
+@mixin breakpoint($size) {
+  @media (min-width: #{map-get($breakpoints, $size)}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+@mixin flex($dir: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $align;
+  justify-content: $justify;
+}
