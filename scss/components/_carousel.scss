@@ -3,17 +3,22 @@
 .carousel {
   position: relative;
 
+  @include u.breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 2fr max(500px);
+  }
+
   &__buttons {
     position: absolute;
     bottom: 50%;
     right: 0;
-    transform: translate(-10%, -55%);
+    transform: translateY(-50%);
     background-color: var(--black);
 
     @include u.breakpoint(desktop) {
-      bottom: 7%;
-      right: 10%;
-      transform: translate(0%, -100%);
+      bottom: 0;
+      right: 30%;
+      transform: translate(-5%, 0%);
     }
   }
 
@@ -21,7 +26,7 @@
     padding: u.rem(16) u.rem(20);
 
     @include u.breakpoint(desktop) {
-      padding: u.rem(30) u.rem(32);
+      padding: u.rem(28) u.rem(32);
     }
   }
 
@@ -31,19 +36,63 @@
 
   &__content {
     padding: u.rem(60) u.rem(23);
+
+    @include u.breakpoint(desktop) {
+      padding: 0;
+      margin: auto 0;
+    }
+  }
+
+  &__content.animate {
+    animation: slide-in 1000ms ease-in-out;
+  }
+
+  &__img.animate {
+    animation: fade-in 1000ms ease-in-out;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0.5;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 
   &__title {
-    padding: u.rem(0) u.rem(10);
+    padding: u.rem(0) u.rem(12);
     font-size: u.rem(37);
     font-weight: 500;
     line-height: 1;
+
+    @include u.breakpoint(desktop) {
+      word-spacing: u.rem(-8);
+      letter-spacing: -1px;
+      line-height: 1;
+      padding: 0;
+      font-size: u.rem(48);
+    }
   }
 
   &__about {
     font-size: u.rem(16);
     line-height: 1.37;
     margin-top: u.rem(16);
+
+    @include u.breakpoint(desktop) {
+      padding-right: u.rem(68);
+      padding-bottom: u.rem(10);
+    }
   }
 
   &__cta {
@@ -54,10 +103,16 @@
     margin-top: u.rem(28);
     text-transform: uppercase;
     letter-spacing: u.rem(12);
-    font-size: u.rem(15);
+    font-size: u.rem(16);
+
+    @include u.breakpoint(desktop) {
+      padding: u.rem(16) 0;
+      margin-top: u.rem(0);
+      margin-bottom: u.rem(20);
+    }
 
     img {
-      margin-left: u.rem(20);
+      margin-left: u.rem(18);
     }
   }
 }

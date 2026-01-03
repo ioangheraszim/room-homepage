@@ -1,7 +1,6 @@
 @use "../util/" as u;
 
 .container {
-  outline: 1px solid green;
   width: min(100%, u.rem(375));
   margin-inline: auto;
 

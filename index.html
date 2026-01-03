@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="./scss/style.css" />
     <title>Frontend Mentor | Room homepage</title>
+    <script type="module" defer src="./main.js"></script>
   </head>
   <body>
     <header class="container header">
@@ -74,14 +75,20 @@
             you love.
           </p>
           <button class="btn carousel__cta">
-            Shop now <img src="./assets/images/icon-arrow.svg" alt="" />
+            <span class="carousel__cta-text">Shop now</span>
+            <img
+              class="carousel__cta-icon"
+              src="./assets/images/icon-arrow.svg"
+              alt=""
+            />
           </button>
         </div>
       </section>
       <section class="container abouts">
-        <figure class="about__figure">
+        <figure class="abouts__figure">
           <picture>
             <img
+              class="abouts__img"
               src="./assets/images/image-about-dark.jpg"
               alt="A man using VR headsets"
             />

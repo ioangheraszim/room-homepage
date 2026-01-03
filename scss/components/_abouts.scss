@@ -1,1 +1,43 @@
 @use "../util/" as u;
+
+.abouts {
+  @include u.breakpoint(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.about {
+  margin-bottom: u.rem(20);
+
+  &__title {
+    padding: u.rem(48) u.rem(30) 0 u.rem(30);
+    text-transform: uppercase;
+    font-size: u.rem(16);
+    letter-spacing: u.rem(5);
+
+    @include u.breakpoint(desktop) {
+      padding: u.rem(70) u.rem(0) 0 u.rem(0);
+      letter-spacing: u.rem(6.5);
+    }
+  }
+
+  &__text {
+    font-size: u.rem(15);
+    padding: u.rem(20) u.rem(34);
+    padding-left: 30;
+    line-height: 1.45;
+    color: var(--grey-500);
+
+    @include u.breakpoint(desktop) {
+      padding: u.rem(16) u.rem(12);
+      padding-left: 0;
+      font-size: u.rem(15);
+    }
+  }
+
+  &__figure {
+    margin-left: auto;
+  }
+}

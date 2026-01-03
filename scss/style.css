@@ -71,7 +71,6 @@ li {
 }
 
 .container {
-  outline: 1px solid green;
   width: min(100%, 23.4375rem);
   margin-inline: auto;
 }
@@ -108,6 +107,8 @@ li {
 @media (min-width: 56.25em) {
   .nav {
     width: auto;
+    left: 2.5rem;
+    padding: 1.5rem;
   }
 }
 .nav__logo {
@@ -115,7 +116,7 @@ li {
 }
 @media (min-width: 56.25em) {
   .nav__logo {
-    margin: auto;
+    margin-right: 1.5rem;
   }
 }
 .nav__btn {
@@ -158,6 +159,7 @@ li {
 @media (min-width: 56.25em) {
   .nav__item {
     background-color: transparent;
+    padding: 1.5rem 1rem;
   }
 }
 @media (min-width: 56.25em) {
@@ -191,18 +193,24 @@ li {
 .carousel {
   position: relative;
 }
+@media (min-width: 56.25em) {
+  .carousel {
+    display: grid;
+    grid-template-columns: 2fr 500px;
+  }
+}
 .carousel__buttons {
   position: absolute;
   bottom: 50%;
   right: 0;
-  transform: translate(-10%, -55%);
+  transform: translateY(-50%);
   background-color: var(--black);
 }
 @media (min-width: 56.25em) {
   .carousel__buttons {
-    bottom: 7%;
-    right: 10%;
-    transform: translate(0%, -100%);
+    bottom: 0;
+    right: 30%;
+    transform: translate(-5%, 0%);
   }
 }
 .carousel__btn {
@@ -210,7 +218,7 @@ li {
 }
 @media (min-width: 56.25em) {
   .carousel__btn {
-    padding: 1.875rem 2rem;
+    padding: 1.75rem 2rem;
   }
 }
 .carousel__btn:hover {
@@ -219,16 +227,59 @@ li {
 .carousel__content {
   padding: 3.75rem 1.4375rem;
 }
+@media (min-width: 56.25em) {
+  .carousel__content {
+    padding: 0;
+    margin: auto 0;
+  }
+}
+.carousel__content.animate {
+  animation: slide-in 1000ms ease-in-out;
+}
+.carousel__img.animate {
+  animation: fade-in 1000ms ease-in-out;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .carousel__title {
-  padding: 0rem 0.625rem;
+  padding: 0rem 0.75rem;
   font-size: 2.3125rem;
   font-weight: 500;
   line-height: 1;
+}
+@media (min-width: 56.25em) {
+  .carousel__title {
+    word-spacing: -0.5rem;
+    letter-spacing: -1px;
+    line-height: 1;
+    padding: 0;
+    font-size: 3rem;
+  }
 }
 .carousel__about {
   font-size: 1rem;
   line-height: 1.37;
   margin-top: 1rem;
+}
+@media (min-width: 56.25em) {
+  .carousel__about {
+    padding-right: 4.25rem;
+    padding-bottom: 0.625rem;
+  }
 }
 .carousel__cta {
   display: flex;
@@ -238,8 +289,56 @@ li {
   margin-top: 1.75rem;
   text-transform: uppercase;
   letter-spacing: 0.75rem;
-  font-size: 0.9375rem;
+  font-size: 1rem;
+}
+@media (min-width: 56.25em) {
+  .carousel__cta {
+    padding: 1rem 0;
+    margin-top: 0rem;
+    margin-bottom: 1.25rem;
+  }
 }
 .carousel__cta img {
-  margin-left: 1.25rem;
+  margin-left: 1.125rem;
+}
+
+@media (min-width: 56.25em) {
+  .abouts {
+    display: grid;
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.about {
+  margin-bottom: 1.25rem;
+}
+.about__title {
+  padding: 3rem 1.875rem 0 1.875rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.3125rem;
+}
+@media (min-width: 56.25em) {
+  .about__title {
+    padding: 4.375rem 0rem 0 0rem;
+    letter-spacing: 0.40625rem;
+  }
+}
+.about__text {
+  font-size: 0.9375rem;
+  padding: 1.25rem 2.125rem;
+  padding-left: 30;
+  line-height: 1.45;
+  color: var(--grey-500);
+}
+@media (min-width: 56.25em) {
+  .about__text {
+    padding: 1rem 0.75rem;
+    padding-left: 0;
+    font-size: 0.9375rem;
+  }
+}
+.about__figure {
+  margin-left: auto;
 }/*# sourceMappingURL=style.css.map */
