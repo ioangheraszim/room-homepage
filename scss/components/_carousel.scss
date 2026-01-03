@@ -72,19 +72,22 @@
   &__title {
     padding: u.rem(0) u.rem(12);
     font-size: u.rem(37);
+    font-size: clamp(
+      u.rem(37),
+      2.0790697674418603rem + 1.0232558139534884vw,
+      u.rem(48)
+    );
     font-weight: 500;
     line-height: 1;
-
     @include u.breakpoint(desktop) {
       word-spacing: u.rem(-8);
       letter-spacing: -1px;
-      line-height: 1;
       padding: 0;
-      font-size: u.rem(48);
     }
   }
 
   &__about {
+    color: var(--grey-500);
     font-size: u.rem(16);
     line-height: 1.37;
     margin-top: u.rem(16);
@@ -113,6 +116,13 @@
 
     img {
       margin-left: u.rem(18);
+    }
+  }
+
+  &__cta:hover {
+    img {
+      transform: translateX(10px);
+      transition: transform 300ms ease-in;
     }
   }
 }

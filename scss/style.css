@@ -168,12 +168,27 @@ li {
   }
 }
 .nav__link {
+  position: relative;
   color: var(--black);
 }
 @media (min-width: 56.25em) {
   .nav__link {
     color: var(--white);
   }
+}
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.3125rem;
+  width: 0;
+  height: 0.125rem;
+  background: var(--white);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+.nav__link:hover::after, .nav__link:focus::after {
+  width: 50%;
 }
 .nav__close {
   width: 1.25rem;
@@ -258,6 +273,7 @@ li {
 .carousel__title {
   padding: 0rem 0.75rem;
   font-size: 2.3125rem;
+  font-size: clamp(2.3125rem, 2.0790697674rem + 1.023255814vw, 3rem);
   font-weight: 500;
   line-height: 1;
 }
@@ -265,12 +281,11 @@ li {
   .carousel__title {
     word-spacing: -0.5rem;
     letter-spacing: -1px;
-    line-height: 1;
     padding: 0;
-    font-size: 3rem;
   }
 }
 .carousel__about {
+  color: var(--grey-500);
   font-size: 1rem;
   line-height: 1.37;
   margin-top: 1rem;
@@ -300,6 +315,10 @@ li {
 }
 .carousel__cta img {
   margin-left: 1.125rem;
+}
+.carousel__cta:hover img {
+  transform: translateX(10px);
+  transition: transform 300ms ease-in;
 }
 
 @media (min-width: 56.25em) {
@@ -336,7 +355,6 @@ li {
   .about__text {
     padding: 1rem 0.75rem;
     padding-left: 0;
-    font-size: 0.9375rem;
   }
 }
 .about__figure {

@@ -33,7 +33,6 @@
     @include u.breakpoint(desktop) {
       padding: u.rem(16) u.rem(12);
       padding-left: 0;
-      font-size: u.rem(15);
     }
   }
 

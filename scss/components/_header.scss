@@ -78,10 +78,28 @@
   }
 
   &__link {
+    position: relative;
     color: var(--black);
     @include u.breakpoint(desktop) {
       color: var(--white);
     }
+  }
+
+  &__link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: u.rem(-5);
+    width: 0;
+    height: u.rem(2);
+    background: var(--white);
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+
+  &__link:hover::after,
+  &__link:focus::after {
+    width: 50%;
   }
 
   &__close {

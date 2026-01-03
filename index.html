@@ -13,21 +13,31 @@
     <title>Frontend Mentor | Room homepage</title>
     <script type="module" defer src="./main.js"></script>
   </head>
+
   <body>
     <header class="container header">
-      <nav class="nav">
-        <button class="btn nav__btn">
-          <img class="btn" src="./assets/images/icon-hamburger.svg" alt="" />
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="btn nav__btn" aria-label="Open navigation menu">
+          <img
+            class="btn"
+            src="./assets/images/icon-hamburger.svg"
+            alt=""
+            aria-hidden="true"
+          />
         </button>
-        <img
-          class="nav__logo"
-          src="./assets/images/logo.svg"
-          alt="image of logo"
-        />
+
+        <a href="#" class="nav__logo" aria-label="Homepage">
+          <img src="./assets/images/logo.svg" alt="Room logo" />
+        </a>
+
         <ul class="nav__list">
           <li class="nav__item">
-            <button class="btn nav__close">
-              <img src="./assets/images/icon-close.svg" alt="button close" />
+            <button class="btn nav__close" aria-label="Close navigation menu">
+              <img
+                src="./assets/images/icon-close.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
           </li>
           <li class="nav__item"><a class="nav__link" href="#">Home</a></li>
@@ -38,7 +48,7 @@
       </nav>
     </header>
     <main class="container main">
-      <section class="carousel">
+      <section class="carousel" aria-label="Featured products carousel">
         <div class="carousel__image">
           <figure class="carousel__slide">
             <picture>
@@ -49,18 +59,35 @@
               <img
                 class="carousel__img"
                 src="./assets/images/mobile-image-hero-1.jpg"
-                alt="a furniture"
+                alt="Modern furniture showcase"
               />
             </picture>
           </figure>
-          <div class="carousel__buttons">
-            <button id="btn-left" class="btn carousel__btn">
-              <img src="./assets/images/icon-angle-left.svg" alt="icon left" />
+          <div
+            class="carousel__buttons"
+            role="group"
+            aria-label="Carousel controls"
+          >
+            <button
+              id="btn-left"
+              class="btn carousel__btn"
+              aria-label="Previous slide"
+            >
+              <img
+                src="./assets/images/icon-angle-left.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </button>
-            <button id="btn-right" class="btn carousel__btn">
+            <button
+              id="btn-right"
+              class="btn carousel__btn"
+              aria-label="Next slide"
+            >
               <img
                 src="./assets/images/icon-angle-right.svg"
-                alt="icon right"
+                alt=""
+                aria-hidden="true"
               />
             </button>
           </div>
@@ -74,28 +101,29 @@
             our collection and make your property a reflection of you and what
             you love.
           </p>
-          <button class="btn carousel__cta">
+          <button class="btn carousel__cta" aria-label="Shop now">
             <span class="carousel__cta-text">Shop now</span>
             <img
               class="carousel__cta-icon"
               src="./assets/images/icon-arrow.svg"
               alt=""
+              aria-hidden="true"
             />
           </button>
         </div>
       </section>
-      <section class="container abouts">
+      <section class="container abouts" aria-labelledby="about-title">
         <figure class="abouts__figure">
           <picture>
             <img
               class="abouts__img"
               src="./assets/images/image-about-dark.jpg"
-              alt="A man using VR headsets"
+              alt="Dark-themed furniture display"
             />
           </picture>
         </figure>
         <div class="about">
-          <h2 class="about__title">About our furniture</h2>
+          <h2 id="about-title" class="about__title">About our furniture</h2>
           <p class="about__text">
             Our multifunctional collection blends design and function to suit
             your individual taste. Make each room unique, or pick a cohesive
@@ -109,7 +137,7 @@
           <picture>
             <img
               src="./assets/images/image-about-light.jpg"
-              alt="A man using VR headsets"
+              alt="Light-themed furniture display"
             />
           </picture>
         </figure>
