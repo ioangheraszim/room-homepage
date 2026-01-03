@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--league-spartan);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}

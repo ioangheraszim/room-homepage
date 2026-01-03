@@ -1,0 +1,90 @@
+@use "../util/" as u;
+
+.header {
+  position: relative;
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: u.rem(40) u.rem(24);
+  position: absolute;
+  width: 100%;
+
+  @include u.breakpoint(desktop) {
+    width: auto;
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    @include u.breakpoint(desktop) {
+      margin: auto;
+    }
+  }
+
+  &__btn {
+    margin-right: auto;
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+
+    padding: u.rem(16);
+
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-130%);
+    transition: transform ease-out 300ms;
+
+    @include u.breakpoint(desktop) {
+      width: auto;
+      background-color: transparent;
+      position: static;
+      transform: translateY(0);
+    }
+  }
+
+  &__list--active {
+    transform: translateY(0);
+    transition: transform 300ms ease-in;
+  }
+
+  &__item {
+    padding: u.rem(24) u.rem(10);
+    text-transform: lowercase;
+    @include u.breakpoint(desktop) {
+      background-color: transparent;
+    }
+  }
+
+  &__item:first-child {
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
+  }
+
+  &__link {
+    color: var(--black);
+    @include u.breakpoint(desktop) {
+      color: var(--white);
+    }
+  }
+
+  &__close {
+    width: u.rem(20);
+    @include u.breakpoint(desktop) {
+      display: none;
+    }
+  }
+}

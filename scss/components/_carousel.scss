@@ -1,0 +1,63 @@
+@use "../util/" as u;
+
+.carousel {
+  position: relative;
+
+  &__buttons {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: translate(-10%, -55%);
+    background-color: var(--black);
+
+    @include u.breakpoint(desktop) {
+      bottom: 7%;
+      right: 10%;
+      transform: translate(0%, -100%);
+    }
+  }
+
+  &__btn {
+    padding: u.rem(16) u.rem(20);
+
+    @include u.breakpoint(desktop) {
+      padding: u.rem(30) u.rem(32);
+    }
+  }
+
+  &__btn:hover {
+    background-color: var(--grey-800);
+  }
+
+  &__content {
+    padding: u.rem(60) u.rem(23);
+  }
+
+  &__title {
+    padding: u.rem(0) u.rem(10);
+    font-size: u.rem(37);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  &__about {
+    font-size: u.rem(16);
+    line-height: 1.37;
+    margin-top: u.rem(16);
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: u.rem(16) u.rem(10);
+    margin-top: u.rem(28);
+    text-transform: uppercase;
+    letter-spacing: u.rem(12);
+    font-size: u.rem(15);
+
+    img {
+      margin-left: u.rem(20);
+    }
+  }
+}

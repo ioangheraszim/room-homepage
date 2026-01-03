@@ -1,0 +1,245 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--league-spartan);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --white: hsl(0, 100%, 100%);
+  --grey-500: hsl(0, 0%, 63%);
+  --grey-800: hsl(0, 0%, 27%);
+  --black: hsl(0, 0%, 0%);
+}
+
+.container {
+  outline: 1px solid green;
+  width: min(100%, 23.4375rem);
+  margin-inline: auto;
+}
+@media (min-width: 56.25em) {
+  .container {
+    width: min(100%, 90rem);
+  }
+}
+
+@font-face {
+  font-family: "League Spartan";
+  src: url("../assets/fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --league-spartan: "League Spartan", sans-serif;
+}
+
+.header {
+  position: relative;
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  position: absolute;
+  width: 100%;
+}
+@media (min-width: 56.25em) {
+  .nav {
+    width: auto;
+  }
+}
+.nav__logo {
+  margin-right: auto;
+}
+@media (min-width: 56.25em) {
+  .nav__logo {
+    margin: auto;
+  }
+}
+.nav__btn {
+  margin-right: auto;
+}
+@media (min-width: 56.25em) {
+  .nav__btn {
+    display: none;
+  }
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 1rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-130%);
+  transition: transform ease-out 300ms;
+}
+@media (min-width: 56.25em) {
+  .nav__list {
+    width: auto;
+    background-color: transparent;
+    position: static;
+    transform: translateY(0);
+  }
+}
+.nav__list--active {
+  transform: translateY(0);
+  transition: transform 300ms ease-in;
+}
+.nav__item {
+  padding: 1.5rem 0.625rem;
+  text-transform: lowercase;
+}
+@media (min-width: 56.25em) {
+  .nav__item {
+    background-color: transparent;
+  }
+}
+@media (min-width: 56.25em) {
+  .nav__item:first-child {
+    display: none;
+  }
+}
+.nav__link {
+  color: var(--black);
+}
+@media (min-width: 56.25em) {
+  .nav__link {
+    color: var(--white);
+  }
+}
+.nav__close {
+  width: 1.25rem;
+}
+@media (min-width: 56.25em) {
+  .nav__close {
+    display: none;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.carousel {
+  position: relative;
+}
+.carousel__buttons {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  transform: translate(-10%, -55%);
+  background-color: var(--black);
+}
+@media (min-width: 56.25em) {
+  .carousel__buttons {
+    bottom: 7%;
+    right: 10%;
+    transform: translate(0%, -100%);
+  }
+}
+.carousel__btn {
+  padding: 1rem 1.25rem;
+}
+@media (min-width: 56.25em) {
+  .carousel__btn {
+    padding: 1.875rem 2rem;
+  }
+}
+.carousel__btn:hover {
+  background-color: var(--grey-800);
+}
+.carousel__content {
+  padding: 3.75rem 1.4375rem;
+}
+.carousel__title {
+  padding: 0rem 0.625rem;
+  font-size: 2.3125rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.carousel__about {
+  font-size: 1rem;
+  line-height: 1.37;
+  margin-top: 1rem;
+}
+.carousel__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.625rem;
+  margin-top: 1.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.75rem;
+  font-size: 0.9375rem;
+}
+.carousel__cta img {
+  margin-left: 1.25rem;
+}/*# sourceMappingURL=style.css.map */
