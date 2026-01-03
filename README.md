@@ -18,18 +18,18 @@ This is a solution to the [Room homepage challenge on Frontend Mentor](https://w
 
 Users should be able to:
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Navigate the slider using either their mouse/trackpad or keyboard
+- View the optimal layout for the site depending on their device's screen size ✅
+- See hover states for all interactive elements on the page ✅
+- Navigate the slider using either their mouse/trackpad or keyboard ✅
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot/screenshot.gif)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/ioangheraszim/room-homepage)
+- Live Site URL: [Live site URL here](https://ioangheraszim.github.io/room-homepage/)
 
 ## My process
 
@@ -40,13 +40,9 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- SCSS
 
 ## Author
 
-- Website - [mreone.dev](https://www.your-site.com)
+- Website - [mreone.dev](https://ioangheraszim.github.io/portofolio/)
 - Frontend Mentor - [@ioangheraszim](https://www.frontendmentor.io/profile/ioangheraszim)
